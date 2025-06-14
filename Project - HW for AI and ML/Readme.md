@@ -19,8 +19,6 @@ The core objective of this project is to:
 
 ## File & Directory Structure
 
-### Root Directory: `C:/Users/Student/Documents/Python`
-
 #### `emotion_detector_with_model.py`
 
 Main script that captures video from the webcam, detects faces, preprocesses the image, and runs inference using either:
@@ -60,7 +58,7 @@ Python dependencies for the project. Includes `keras`, `tensorflow`, `opencv-pyt
 
 ---
 
-### Accelerator Folder: `accelerator_verilator/`
+### Accelerator Platform Used: Verilator
 
 #### `cnn_accelerator.sv`
 
