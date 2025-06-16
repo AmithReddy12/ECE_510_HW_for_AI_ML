@@ -1,0 +1,27 @@
+source emotion_env/Scripts/activate
+cd accelerator_verilator
+verilator --cc cnn_accelerator.sv --exe sim_main.cpp wrapper.cpp --build
+python ../emotion_detector_with_model.py
+///cd accelerator_verilator
+python analyze_emotion_results.py
+
+
+
+./obj_dir/Vcnn_accelerator
+The .obj_dir/Vcnn_accelerator is automatically created after you compile with Verilator.
+
+You don't need to run it manually unless you're testing.
+
+Your Python script already calls it as part of the hardware inference workflow.
+
+What the make file does:
+
+make: Builds everything and runs the Python emotion detection script.
+
+make build: Runs Verilator to compile SystemVerilog files.
+
+make run: Runs the Python script emotion_detector_with_model.py.
+
+make simulate: Executes the hardware binary manually if needed.
+
+make clean: Cleans up the obj_dir, temporary logs, and CSV files.
