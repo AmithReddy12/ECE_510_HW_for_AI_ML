@@ -1,0 +1,276 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : cnn_accelerator
+Version: Q-2019.12-SP3
+Date   : Sun Jun 15 02:41:48 2025
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: valid_in (input port clocked by clk)
+  Endpoint: emotion_out_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  valid_in (in)                            0.02       0.22 f
+  U8/Y (INVX0_RVT)                         0.05       0.27 r
+  U10/Y (AO22X1_RVT)                       0.07       0.34 r
+  emotion_out_reg_2_/D (DFFARX1_RVT)       0.00       0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                       -0.10       1.90
+  emotion_out_reg_2_/CLK (DFFARX1_RVT)     0.00       1.90 r
+  library setup time                      -0.06       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         1.50
+
+
+  Startpoint: valid_in (input port clocked by clk)
+  Endpoint: emotion_out_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  valid_in (in)                            0.02       0.22 f
+  U8/Y (INVX0_RVT)                         0.05       0.27 r
+  U11/Y (AO22X1_RVT)                       0.07       0.34 r
+  emotion_out_reg_1_/D (DFFARX1_RVT)       0.00       0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                       -0.10       1.90
+  emotion_out_reg_1_/CLK (DFFARX1_RVT)     0.00       1.90 r
+  library setup time                      -0.06       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         1.50
+
+
+  Startpoint: valid_in (input port clocked by clk)
+  Endpoint: emotion_out_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  valid_in (in)                            0.02       0.22 f
+  U8/Y (INVX0_RVT)                         0.05       0.27 r
+  U12/Y (AO22X1_RVT)                       0.07       0.34 r
+  emotion_out_reg_0_/D (DFFARX1_RVT)       0.00       0.34 r
+  data arrival time                                   0.34
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                       -0.10       1.90
+  emotion_out_reg_0_/CLK (DFFARX1_RVT)     0.00       1.90 r
+  library setup time                      -0.06       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -0.34
+  -----------------------------------------------------------
+  slack (MET)                                         1.50
+
+
+  Startpoint: emotion_out_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: emotion_out[2]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  emotion_out_reg_2_/CLK (DFFARX1_RVT)                    0.00       0.00 r
+  emotion_out_reg_2_/Q (DFFARX1_RVT)                      0.17       0.17 r
+  emotion_out[2] (out)                                    0.00       0.17 r
+  data arrival time                                                  0.17
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  output external delay                                  -0.20       1.70
+  data required time                                                 1.70
+  --------------------------------------------------------------------------
+  data required time                                                 1.70
+  data arrival time                                                 -0.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.53
+
+
+  Startpoint: emotion_out_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: emotion_out[1]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  emotion_out_reg_1_/CLK (DFFARX1_RVT)                    0.00       0.00 r
+  emotion_out_reg_1_/Q (DFFARX1_RVT)                      0.17       0.17 r
+  emotion_out[1] (out)                                    0.00       0.17 r
+  data arrival time                                                  0.17
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  output external delay                                  -0.20       1.70
+  data required time                                                 1.70
+  --------------------------------------------------------------------------
+  data required time                                                 1.70
+  data arrival time                                                 -0.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.53
+
+
+  Startpoint: emotion_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: emotion_out[0]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  emotion_out_reg_0_/CLK (DFFARX1_RVT)                    0.00       0.00 r
+  emotion_out_reg_0_/Q (DFFARX1_RVT)                      0.17       0.17 r
+  emotion_out[0] (out)                                    0.00       0.17 r
+  data arrival time                                                  0.17
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.10       1.90
+  output external delay                                  -0.20       1.70
+  data required time                                                 1.70
+  --------------------------------------------------------------------------
+  data required time                                                 1.70
+  data arrival time                                                 -0.17
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.53
+
+
+  Startpoint: valid_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: valid_out (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  valid_out_reg/CLK (DFFARX1_RVT)          0.00       0.00 r
+  valid_out_reg/Q (DFFARX1_RVT)            0.16       0.16 r
+  valid_out (out)                          0.00       0.16 r
+  data arrival time                                   0.16
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                       -0.10       1.90
+  output external delay                   -0.20       1.70
+  data required time                                  1.70
+  -----------------------------------------------------------
+  data required time                                  1.70
+  data arrival time                                  -0.16
+  -----------------------------------------------------------
+  slack (MET)                                         1.54
+
+
+  Startpoint: valid_in (input port clocked by clk)
+  Endpoint: valid_out_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cnn_accelerator    ForQA                 saed32rvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  valid_in (in)                            0.02       0.22 r
+  valid_out_reg/D (DFFARX1_RVT)            0.00       0.22 r
+  data arrival time                                   0.22
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  clock uncertainty                       -0.10       1.90
+  valid_out_reg/CLK (DFFARX1_RVT)          0.00       1.90 r
+  library setup time                      -0.07       1.83
+  data required time                                  1.83
+  -----------------------------------------------------------
+  data required time                                  1.83
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         1.62
+
+
+1

@@ -1,0 +1,32 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Ultra(TM) in wire load mode
+// Version   : Q-2019.12-SP3
+// Date      : Sun Jun 15 02:43:33 2025
+/////////////////////////////////////////////////////////////
+
+
+module cnn_accelerator ( clk, rst, valid_in, pixel_in, emotion_out, valid_out
+ );
+  input [7:0] pixel_in;
+  output [2:0] emotion_out;
+  input clk, rst, valid_in;
+  output valid_out;
+  wire   n2, n3, n4, n5, n6;
+
+  DFFARX1_RVT valid_out_reg ( .D(valid_in), .CLK(clk), .RSTB(n2), .Q(valid_out) );
+  DFFARX1_RVT emotion_out_reg_2_ ( .D(n5), .CLK(clk), .RSTB(n2), .Q(
+        emotion_out[2]) );
+  DFFARX1_RVT emotion_out_reg_1_ ( .D(n4), .CLK(clk), .RSTB(n2), .Q(
+        emotion_out[1]) );
+  DFFARX1_RVT emotion_out_reg_0_ ( .D(n3), .CLK(clk), .RSTB(n2), .Q(
+        emotion_out[0]) );
+  INVX0_RVT U8 ( .A(valid_in), .Y(n6) );
+  INVX0_RVT U9 ( .A(rst), .Y(n2) );
+  AO22X1_RVT U10 ( .A1(valid_in), .A2(pixel_in[2]), .A3(n6), .A4(
+        emotion_out[2]), .Y(n5) );
+  AO22X1_RVT U11 ( .A1(valid_in), .A2(pixel_in[1]), .A3(n6), .A4(
+        emotion_out[1]), .Y(n4) );
+  AO22X1_RVT U12 ( .A1(valid_in), .A2(pixel_in[0]), .A3(n6), .A4(
+        emotion_out[0]), .Y(n3) );
+endmodule
+
