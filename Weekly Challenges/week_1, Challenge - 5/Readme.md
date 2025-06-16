@@ -94,6 +94,3 @@ Based on the opcode mix, memory access patterns and profiling data, draft a shor
 ---
 **Author:** Amith Reddy  
 **Last Edited:** 2025-06-16
-
-> “Premature optimisation is the root of all evil.” — Donald Knuth  
-> *Profile first, optimise after.*
